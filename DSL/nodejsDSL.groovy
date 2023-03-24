@@ -1,13 +1,13 @@
-job('Aplicacion Node.js DSL') {
+job('Aplicacion NodeJS DSL') {
     description('Aplicación Node JS DSL para el curso de Jenkins')
     scm {
-        git('https://github.com/macloujulian/nodejsapp.git', 'master') { node ->
-            node / gitConfigName('macloujulian')
-            node / gitConfigEmail('macloujulian@gmail.com')
+        git('https://github.com/alvaro2042/nodejsapp.git', 'main') { node ->
+            node / gitConfigName('alvaro2042')
+            node / gitConfigEmail('acamargo@lucasian.com')
         }
     }
     triggers {
-        scm('H/7 * * * *')
+        scm('H/1 * * * *')
     }
     wrappers {
         nodejs('nodejs')
